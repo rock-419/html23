@@ -1,0 +1,25 @@
+html,body {
+    background-size: cover;
+}
+.red {
+    background-color: #DA2032;
+
+}
+.blue {
+    background-color: #0066b3;
+
+}
+.flex {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    width: 100px;
+    height: 180px;
+}
+div img {
+    position:relative;
+    top:20px;
+    left:30px;
+    height:125px;
+}
