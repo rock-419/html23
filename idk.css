@@ -1,0 +1,18 @@
+html, body {
+    height:100%;
+}
+.flex-container {
+    height:100%; 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: dodgerblue;
+}
+.flex-container > div {
+    width:50px;
+    line-height:50px;
+    background: white;
+    margin:25px;
+    text-align:center;
+    justify-content:center;
+}
