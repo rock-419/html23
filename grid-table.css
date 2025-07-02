@@ -1,0 +1,72 @@
+
+.container {
+    display:grid;
+    justify-content: stretch;
+    align-items:stretch ;
+}
+.numberone{
+    background-color:blue;
+    width: 1220px;
+    height:470px;
+    gap:10px 10px;
+    grid-template: repeat(3,150px ) / repeat(3,400px);   
+    padding:10px;
+}
+.item1 {
+    grid-area: 1 / 1 / 2 /3 ;
+}
+.numberone div{
+    display:flex;
+    justify-content: center;
+    align-items:center ;
+    background-color:lightblue;
+}
+.numbertwo { 
+    margin-top:50px;
+    padding: 20px;
+    background-color: green;
+    width: 600px;
+    height: 310px;
+    gap: 50px 0px;
+    grid-template: repeat(3,70px)/ repeat(3,200px)
+}
+.numbertwo div {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:lightgreen;
+    border:1px solid black;
+}
+.numberthree {
+    padding: 0 0 0 200px;
+    gap:7px 7px;
+    margin-left:500px;
+    background-color: white;
+    grid-template: repeat(3,70px)/ repeat(3,70px)
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items1 {
+    grid-area: 1/1/2/3;
+    background-color: lightgreen;
+}
+.items2 {
+    background-color: lightyellow;
+}
+.items3 {
+    background-color: lightblue;
+    grid-area:2/1/4/2;
+}
+.items4 {
+    background-color: lightpink;
+    grid-area:2/2/3/4;
+}
+.items5 {
+    background-color: lightgreen;
+}
+.items6 {
+    background-color: lightsalmon;
+}
