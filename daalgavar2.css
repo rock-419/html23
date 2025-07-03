@@ -1,0 +1,22 @@
+.container {
+    text-align: center;
+    font-size: 0.7rem;
+    display: grid;
+    grid-template-columns: repeat(3,280px);
+    justify-content: center;
+    align-items: center;
+}
+.business {
+    background: linear-gradient(90deg,#f61b10,#ef0963);
+    background-color: #f9004d;
+    background-size: cover;
+    color:whitesmoke;
+}
+.container h3, .container p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box {
+    border:1px solid grey;
+    border-radius: 10px;
+    padding:10px;
+}
