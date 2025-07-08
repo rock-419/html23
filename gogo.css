@@ -1,0 +1,127 @@
+html {
+     margin:0;  
+}
+
+header {
+     padding: 10px 20px;
+     display: flex;
+     justify-content: space-between;
+   }
+.main-body {
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header .menu-left {
+     display: flex;
+     align-items: center;
+     gap: 50px;
+     margin-left: 165px;
+}
+   
+.menu-left nav {
+     display: flex;
+     gap: 30px;
+}
+   
+.menu-left nav a {
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+}
+   
+.menu-left img {
+     width: 100px;
+}
+   
+.menu-right {
+     display: flex;
+     gap: 20px;
+     margin-right: 300px;
+}
+   
+.widget {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+   
+.widget h4 {
+     margin: 0;
+     font-size: 12px;
+     font-weight: 400;
+     text-align: end;
+}
+.widget-info img {
+     width: 20px;
+}
+.widget-info {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+}
+   
+.widget-info span {
+     font-size: 18px;
+     font-weight: bold;
+}
+
+.left-text button {
+     background: #d65151;
+     background: linear-gradient(90deg,rgba(214, 81, 81, 1) 33%, rgba(237, 221, 83, 1) 81%);
+     border:0px solid grey;
+     border-radius: 15px;
+     width:85px;
+     height:30px;
+     color:white;
+}
+.main-body {
+     position: relative;
+     display:grid;
+}
+
+.first-part {
+     margin:30px 05px 30px 0px;
+     grid-template-columns: repeat(2,1fr);
+     gap:20px;
+}
+
+.first-part img {
+     border-radius: 5px;
+}
+.left-text {
+     border-radius: 5px;
+     background: #c7c7c7;
+     background: linear-gradient(90deg,rgba(199, 199, 199, 1) 0%, rgba(255, 255, 255, 1) 65%);
+     padding:40px;
+}
+
+.second-part {
+     margin:0 237px 0 185px;
+     grid-template-columns: repeat(4,1fr);
+}
+
+.first-picture img {
+     border-radius: 5px;
+     width:230px;
+     height:140px;
+}
+
+.second-picture img {
+     border-radius: 5px;
+     width:230px;
+     height:140px;
+}
+
+.third-picture img {
+     border-radius: 5px;
+     width:230px;
+     height:140px;
+}
+
+.fourth-picture img {
+     width:200px;
+     height:200px;
+}
+
+.emoji {
+     position: absolute;
+}
