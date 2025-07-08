@@ -1,0 +1,92 @@
+body {
+    position: relative;
+}
+
+.box {
+    background-color: aqua;
+    width: 200px;
+    height:200px;
+    animation: moveRight 2s infinite;
+}
+
+@keyframes moveRight {
+    from {
+        left:0;
+    }
+    to {
+        left:300px;
+    }
+}
+
+body p {
+    animation: appear 1.5s ease-in 0s infinite normal;
+}
+
+@keyframes appear {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+body button {
+    animation: tomroh 1s infinite alternate;
+}
+
+@keyframes tomroh {
+    from {
+        scale:1;
+    }
+    to {
+        scale:2;
+    }
+    
+}
+
+.work4 {
+    width:100px;
+    height: 100px;
+    animation: colorCycle 3s infinite normal;
+}
+
+@keyframes colorCycle {
+    0%{background-color: blue;}
+    33%{background-color:green;}
+    66%{background-color: yellow;}
+    100%{background-color: blue;}
+}
+
+h1 {
+    animation: slideDown 2s infinite alternate;
+}
+
+@keyframes slideDown {
+    from {
+        opacity:0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+.animation {
+    height: 200px;
+    width: 200px;
+    background-image: url("img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: changePicture 3s infinite;
+}
+
+@keyframes changePicture {
+   from {
+        background-image: url("img1.jpg");
+    }
+    to {
+        background-image: url("img2.jpeg");
+    }
+}

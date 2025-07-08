@@ -1,0 +1,59 @@
+.hairtsag {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.hairtsag:hover {
+    transition: transform 3s ease-in-out;
+    transform:translate(50px,20px);
+}
+
+button:hover {
+    transition: transform 2s linear;
+    transform: rotate(360deg);
+}
+
+.hover {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+.hover:hover {
+    animation: tomroh 2s infinite;
+    transition: transform 2s linear;
+}
+
+@keyframes tomroh {
+    from {
+        scale:1;
+    }
+    to {
+        scale:2;
+    }
+}
+
+.text p {
+    transform: skew(20deg);
+}
+
+.text p:hover {
+    animation: unjih 1s infinite;
+    transition: transform 1s linear;
+}
+
+@keyframes unjih {
+    to {
+        transform: skew(0deg);
+    }
+}
+
+.combination {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.combination:hover {
+    transform: rotate(10deg) scale(1.5) translateY(-10px);
+}

@@ -1,0 +1,111 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-screen {
+    gap:100px;
+    display: flex;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.L {
+    animation: hudluh 2s linear 0s infinite normal;
+}
+
+@keyframes hudluh {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+        transform: skew(170deg);
+    }
+}
+.N {
+    animation:hudluh1 2s linear infinite normal;
+}
+@keyframes hudluh1 {
+    from {
+        opacity: 0;
+        transform:translate(-50px,-60px) scale(2);
+    }
+    to {
+        opacity:1;
+        transform:translate(50px,60px);
+    }
+}
+
+.A {
+    animation:hudluh2 2s linear  infinite normal;
+}
+@keyframes hudluh2 {
+    from {
+        opacity: 1;
+        transform: translate(0px, -100px)
+    }
+    to {
+        opacity:1;
+        transform: translate(0px, 100px)
+    }
+}
+
+.D {
+    animation:hudluh3 2s linear infinite normal;
+}
+@keyframes hudluh3 {
+    from {
+        scale:3.3;
+    }
+    to {
+        opacity:0.5;
+        scale:1;
+    }
+}
+
+.I {
+    animation:hudluh4 2s linear infinite normal;
+}
+@keyframes hudluh4 {
+    from {
+
+    }
+    to {
+        transform: translate(0px, -100px)
+    }
+}
+
+.O {
+    animation:hudluh5 2s linear infinite normal;
+}
+@keyframes hudluh5 {
+    from {
+        opacity: 0;
+        transform:translate(50px,0px) scale(2);
+    }
+    to {
+        opacity:1;
+        transform:translate(-50px,-60px);
+    }
+}
+
+.G {
+    animation:hudluh6 2s linear infinite normal;
+}
+@keyframes hudluh6 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+        transform: skew(-170deg);
+    }
+}
