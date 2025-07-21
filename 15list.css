@@ -1,0 +1,106 @@
+ul li:first-child {
+    background-color: aqua;
+    color: whitesmoke;
+}
+
+.paragraphs p:last-child {
+    color: red;
+}
+
+li:nth-child(odd){
+    font-weight: bold;
+}
+
+.paragraphs p:nth-child(odd){
+    font-weight: bold;
+}
+
+.paragraphs p:nth-child(3){
+    font-style: italic;
+}
+
+.paragraphs p:nth-child(6){
+    font-style: italic;
+}
+
+.text p::first-letter {
+    font-size: 2em;
+    color:blueviolet;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+button:active {
+    background-color: blueviolet;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color:lightgray;
+    height: 15px;
+    width: 700px;
+}
+
+.progress-bar::before {
+    content: "";
+    display: block;
+    background-color: lightgreen;
+    border-radius: 10px;
+    width: 0px;
+    height: 15px;
+    transition: all 1.7s ease;
+}
+
+.progress-bar:hover::before{
+    width: 700px;
+    height:15px;
+}
+
+.zurag {
+    margin-top: 50px;
+    background-image:url(seagull.png);
+    width: 250px;
+    height: 250px;
+}
+
+.zurag::before {
+    opacity:0;
+    content:"lorem";
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    transition:all .1s linear;
+}
+
+.zurag:hover::before {
+    color:aliceblue;
+    opacity: 0.5;
+}
+
+.tool-tip {
+    position:absolute;
+    margin:0;
+    color: lightblue;
+    font-size: 2em;
+
+}
+
+.tool-tip::after {
+    position: absolute    width: 110px;
+    height:40px;;
+    transition:all .7s ease;
+    content:"goodbye";
+    opacity: 0;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.tool-tip:hover::after {
+    opacity:1;
+}
