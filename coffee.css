@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.sticky-header-section {
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-left-side {
+  display: flex;
+  gap: 50px;
+}
+
+.header-left-side ul {
+  display: flex;
+  text-decoration: none;
+  gap: 30px;
+}
+
+.header-right-side {
+  display: flex;
+  gap: 50px;
+}
+.right-side-middle {
+  display: flex;
+}
+
+.main {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  background: color #f6f6f6;
+  margin:40px 0 0 0;
+  padding:200px 0 0 200px;
+}
+
+.button {
+  display: flex;
+  border: 0.7px solid grey;
+  background-color: blue;
+  text-decoration-color: white;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-text p {
+  opacity: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.3em;
+  animation: leftToRight 1s normal 0s forwards;
+}
+
+.body-text h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    opacity: 0;
+    font-size: 3.2em;
+    animation: leftToRight 1s normal 0.3s forwards;
+}
+
+.body-text h5 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  opacity: 0;
+  font-weight: lighter;
+  font-size: 1.2em;
+  animation: leftToRight 1s normal 0.6s forwards;
+}
+
+.body-image-container {
+    opacity: 0;
+    animation: leftToRight 1s normal 0s forwards;
+}
+
+.button {
+    opacity: 0;
+    animation: leftToRight 1s normal 0.9s forwards;
+}
+
+@keyframes leftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.product-section h5, .product-section h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.fourth-products {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 100px 300px 0 300px;
+}
+.product-section h5 {
+    font-size: 0.9em;
+    margin:100px 0 30px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:lightsalmon;
+}
+
+.product-section h3 {
+    margin:0;
+    font-size: 3.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
