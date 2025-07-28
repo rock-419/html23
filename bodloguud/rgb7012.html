@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = Number(prompt())
+        if (a%100>60){
+            sec=(a%100)-60
+        }
+        else if (a%100<60) {
+            sec=a%100
+
+        }
+        else if (a%100==60) {
+            sec=0
+        }
+        let c = a-sec;
+        let d = c%1000;
+        if (d%60==0) {
+            min=d/60;
+        }
+        else if (d%60>0) {
+            min = (d-(d%60))/60;
+            sec = sec+(d%60);
+        }
+        let g =((c-d)%3600);
+        let f = g%60;
+        if (f==0) {
+            hour=f;
+        }
+        else if (f>0) {
+            sec= f + sec;
+            min = (g-f)/60 + min;
+            hour = (c-g)/3600 ;
+        }
+        console.log(hour,min,sec)
+    </script>
+</body>
+</html>
