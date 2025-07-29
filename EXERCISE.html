@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //ex1
+
+        const car = {
+            brand: "toyota" ,
+            model: 200,
+            year: 2020
+        };
+
+       console.log("EX1","brand", car.brand);
+       console.log("model", car.model);
+       console.log("year", car.year);
+
+       //ex2
+
+        const person = {
+            firstName: "Chuluudai",
+            lastName: "Lkhagva-ochir" ,
+            age: 17
+        };
+
+        delete person.age;
+
+        person.position= "Student";
+        person["isMarried"]= "No";
+        person.city= "UB";
+
+        console.log("EX2","person:", person);
+
+
+        //ex3
+
+        const getFullName = function(firstName, lastName) {
+            return firstName + " " + lastName;
+        }
+
+        person.getFullName = getFullName;
+
+        console.log("EX3",person.getFullName(person.firstName, person.lastName))
+
+        //ex4
+
+        const movie = {
+            title: "hello" ,
+            director: "me" ,
+            year: 2025,
+            genre: "horror" 
+        };
+
+        const getKeysAndValues = function() {
+            return {
+                keys: Object.keys(movie),
+                values: Object.values(movie)
+            }
+        }
+
+        movie.getKeysAndValues = getKeysAndValues;
+
+        console.log("EX4:", movie.getKeysAndValues())
+        //ex5
+
+        const address={
+            street: "HI",
+            zip:"1234"
+        };
+
+        address.city= "UB";
+
+        const student={
+        };
+
+        student.name = "chuluudai";
+        student.age= 17 ;
+        student.address= address;
+
+        const getFullAddress = function (street, zip, city) {
+            return city + " " + street + " " + zip
+        };
+
+        student.getFullAddress = getFullAddress;
+
+        console.log("EX5:", student.getFullAddress(address.street, address.zip, address.city))
+        
+        //ex6
+
+        const user={
+        };
+        user.name = "chuluu";
+        user.age= 16;
+
+        const greet= function () {
+            return `Hello,  my name is ${user.name}`
+        }
+        user.greet = greet;
+        console.log(greet())
+        const updateName = function (name) {
+            return user.name = name;
+        }
+
+        user.updateName=updateName;
+        console.log("EX6:", updateName("fhhfhhf"), greet())
+        //ex7 
+
+        const book1={
+        }
+        book1.title="ugu";
+        book1.year=2025;
+        book1.author="hello";
+
+        const book2={
+        }
+        book2.author="bi";
+        book2.description = "mongol";
+        book2.category= "galzu";
+        book2.year= 1983;
+        const mergeBooks = function () {
+            return Object.assign(book1,book2)
+        }
+        book1.mergeBooks = mergeBooks;
+        console.log("EX7", mergeBooks())
+
+        //ex8
+
+        const config = {
+            host:"chi",
+            port: 12313 ,
+            protocol:"sfdds"
+        };
+
+        Object.freeze(config);
+        delete config.host;
+        config.mongol="hello";
+        console.log("EX8:", config )
+
+        Object.seal(config);
+        config.host = "shine";
+        config.protocol = "sadas";
+        console.log(config)
+
+        //ex9
+        user.gender="male";
+        const getKeysAndValuesHoyr= function () {
+            return {
+                keys:Object.keys(user),
+                values:Object.values(user)
+            }
+        }
+        user.getKeysAndValuesHoyr = getKeysAndValuesHoyr;
+        console.log("EX9", getKeysAndValuesHoyr())
+
+        //ex10
+
+        const students ={
+            1:{name: "Bolor", grade:95},
+            2:{name: "Anu", grade:87},
+            3:{name: "Temuujin", grade:78},
+            4:{name: "Delger", grade:83},
+            5:{name: "Zolzaya", grade:92}
+        };
+        console.log("Average Grade:")
+        const calculateAverage= function() {
+            const total = students[1].grade + students[2].grade + students[3].grade + students[4].grade + students[5].grade 
+            const averageGrade = total/5
+            return averageGrade
+        }
+        console.log(calculateAverage());
+
+        function findAboveAverageStudents(averageGrade) {
+            console.log("Above Average Students: ")
+            if (students[1].grade > averageGrade) {
+                console.log(`${students[1].name}, ${students[1].grade}`);
+            };
+            if (students[2].grade > averageGrade) {
+                console.log(`${students[2].name}, ${students[2].grade}`);
+            };
+            if (students[3].grade > averageGrade) {
+                console.log(`${students[3].name}, ${students[3].grade}`);
+            };
+            if (students[4].grade > averageGrade) {
+                console.log(`${students[4].name}, ${students[4].grade}`);
+            };
+            if (students[5].grade > averageGrade) {
+                console.log(`${students[5].name}, ${students[5].grade}`);
+            };
+        }
+        console.log( findAboveAverageStudents( calculateAverage()))
+    </script>
+</body>
+</html>
