@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex1
+
+        console.log("EX1")
+        const hello = ["micheal","lebron","kareem","tim",'shaq'];
+        console.log(hello[3])
+        
+        //ex2
+        
+        console.log("EX2")
+        const animals = ["lion" , "tiger" , "elephant" , "giraffe",];
+        animals[1]= "panda";
+        console.log(animals)
+
+        //ex3
+
+        console.log("EX3")
+        const books = ["1934","brave new world","fahrenheit 451"];
+        books.push = ("harry potter"); 
+        books.push = ("archemist");
+        console.log(books)
+
+        //ex4
+        
+        console.log("EX4")
+        const number = [10,20,30,40,50];
+        console.log(number.indexOf("30"))
+
+        //ex5
+
+    console.log("EX5")
+        const fruit1 = ["apple","cherry","mango"];
+        const fruit2 = ["grape","pear","banana"];
+        const allFruit = fruit1.concat(fruit2);
+        console.log(allFruit)
+
+        //ex6
+
+        console.log("EX6")
+        const colors = ["red","green","blue","yellow","purple"];
+        console.log(colors.includes("red"));
+        console.log(colors.includes("green"));
+        console.log(colors.includes("blue"));
+        console.log(colors.includes("yellow"));
+        console.log(colors.includes("purple"));
+        console.log(colors.includes("dark"));
+        console.log(colors.includes("light"));
+        
+        //ex7
+
+        console.log("EX7")
+        const array1 = ["a","b","c"];
+        const array2 = ["a","b","c"];
+        const urt1 = array1.length ;
+        const urt2 = array2.length ;
+        if (urt1==urt2) {
+            console.log("true")
+        }
+        else {
+            console.log("false")
+        }
+
+        //ex8
+
+        console.log("EX8")
+        const words = ["js","is","a","versatile","language"];
+        console.log(words.toString())
+
+        //ex9
+
+        console.log("EX9:");
+
+        const students = [
+            { name: "Anu", grade: 85 },
+            { name: "Bold", grade: 92 },
+            { name: "Tuvshin", grade: 78 },
+            { name: "Naraa", grade: 88 },
+            { name: "Solongo", grade: 95 }
+        ];
+        const topStudents = [];
+        students.forEach(function(student) {
+            if (student.grade > 90) {
+                return topStudents.push(student.grade)
+            }
+        });
+        
+        console.log("Top Students", topStudents);
+
+        console.log("Dungiin eremblel", students.sort((x,y) => y.grade - x.grade));
+
+        let highestGrade = 0;
+        students.forEach(student =>{
+            if(student.grade > highestGrade) {highestGrade = student.grade}
+        });
+        let highestStudent = students.find(student => student.grade == highestGrade);
+
+        console.log("Highest Grade",highestStudent);
+
+        //ex10
+
+        console.log("EX10:")
+        const products = [
+            { id: 1, name: "Laptop", price: 2500 },
+            { id: 2, name: "Mouse", price: 25 },
+            { id: 3, name: "Monitor", price: 400 },
+            { id: 4, name: "Keyboard", price: 100 },
+            { id: 5, name: "Phone", price: 1200 }
+        ];
+
+        const cheapProductNames = [];
+        products.forEach(function(product) {
+            if (product.price < 500 ) {
+                return cheapProductNames.push(product);
+            }
+        });
+        console.log("Cheap Products", cheapProductNames);
+
+        console.log("Uniin eremblel", products.sort((x,y) => y.price - x.price));
+        const myangaDeesh = products.find(function(product) {
+            return product.price>1000
+        });
+        console.log("Ehnii 1000-aas deesh",myangaDeesh);
+
+        //ex12
+
+        const productsa = [
+            { id: 101, name: "Laptop", prices: [2000, 2100, 1900] },
+            { id: 102, name: "Mouse", prices: [25, 27, 24] },
+            { id: 103, name: "Keyboard", prices: [100, 110, 90] },
+            { id: 104, name: "Laptop", prices: [1950, 1980, 2000] },
+            { id: 105, name: "Monitor", prices: [400, 390, 410] }
+        ];
+        const averagePrice=[];
+        const totalPrice=[];
+        productsa.forEach(product => {
+            prices.forEach(dotoodprices => {
+                let totalPrice = dotoodprices 
+            });
+        });
+        console.log(totalPrice);
+    </script>
+</body>
+</html>
