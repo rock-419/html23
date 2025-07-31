@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //FOR
+        //ex1
+
+        for (let i=0; i<101;i++){
+            console.log(i)
+        }
+
+        //ex2
+
+        let fruits = ["apple","banana","mango","orange","strawberry"];
+        for(let i=0;i<4;i++) {
+            console.log(fruits)
+        }
+        
+        //ex3
+
+        const cars= ["bmw", "volvo","saab","ford","fiat","audi"];
+        for (let i=1; i<6; i+=2) {
+            console.log(cars[i])
+        }
+
+        //ex4
+
+        let total=0;
+        for (let i=0;i<11;i++)  {total +=i ;};
+        console.log(total)
+
+        //WHILE
+        //ex1
+        console.log("ex1:")
+        let i=1;
+        while (i<101) {
+            console.log(i)
+            i+=2;
+        }
+
+        //ex2
+        console.log("ex2:")
+        let a =0;
+        while (a<101) {
+            console.log(a)
+            a+=2;
+        }
+
+        //ex3
+        console.log("ex3:")
+        let sum100=0;
+        let x= 1;
+        while (sum100 <= 100) {
+            if (sum100 = 105) {
+                console.log(sum100)
+                break;
+            }
+            x++;
+        }
+        
+        //ex4
+        console.log("ex4:")
+        let y=0;
+        while(y<51) {
+            if (y%3==0) {
+                console.log(y)
+            }
+            y++;
+        }
+
+        //high order
+        //ex1
+        console.log("ex1:")
+        const users = [
+        { id: 1, name: "Tsetsegee" },
+        { id: 2, name: "Dulmaa" },
+        { id: 3, name: "Bataa" }
+        ];
+
+        const orders = [
+        { userId: 1, items: [{ name: "MacBook", price: 2500000 }, { name: "Mouse", price: 40000 }] },
+        { userId: 2, items: [{ name: "Pen", price: 2000 }] },
+        { userId: 3, items: [{ name: "Chair", price: 120000 }] },
+        ];
+        const ordersItems = orders.filter(order => order.items.some(item => item.price > 100000));
+        const zuunMyangaUsers = ordersItems.map ((order) => {
+            const user = users.find((use) => use.id = order.userId) ;
+
+            return user.name
+        });
+        console.log(zuunMyangaUsers)
+        
+        //ex2
+        console.log("ex2:")
+        const students = [
+        { id: 1, name: "William", selectedSubjects: ["Math", "Physics"] },
+        { id: 2, name: "Drake", selectedSubjects: ["Biology", "Chemistry"] },
+        { id: 3, name: "Weekend", selectedSubjects: ["Math", "History"] },
+        ];
+
+        const subjects = [
+        { name: "Math" },
+        { name: "Physics"},
+        { name: "Chemistry" },
+        { name: "Biology"},
+        { name: "History" },
+        ];
+        let mathHicheel = subjects.find(subject => subject.name === "Math");
+        const mathUzdeg = students.filter(student.selectedSubjects.includes(mathHicheel))
+    </script>
+</body>
+</html>
