@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p> Hello, my name is:</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p>This is the total price:</p>
+    <p id="demo3"></p>
+    <script>
+
+        //ToDo1
+
+        class Person {
+            constructor (name,age,gender) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+            greet () {
+                return (`hello ${this.name}`);
+            }
+        }
+        class Student extends Person{
+            constructor (name,age,gender, studentId) {
+                super (name,age,gender);
+                this.studentId= studentId;
+            }
+            study () {
+                return (`${this.name} is studying`)
+            }
+        }
+        const person = new Person ("chulu",17,"male");
+        const student = new Student ("rock",20,"female");
+        const first = person.greet();
+        const second = student.study();
+        document.getElementById("demo1").innerHTML = first;
+        document.getElementById("demo2").innerHTML = second;
+
+        //ToDo2
+
+        class Item {
+            constructor(name,price,quantity){
+                this.name = name;
+                this.price = price ;
+                this.quantity = quantity;
+            }
+            getTotalPrice () {
+                return this.price * this.quantity;
+            }
+        };
+
+        const item = new Item ("macbook",25000000,"4");
+        const totalPrice = item.getTotalPrice();
+
+        document.getElementById("demo3").innerHTML = totalPrice;
+
+        class Inventory extends Item{
+            constructor (name,price,quantity){
+                super(name,price,quantity);
+
+                this.items = [];
+            }
+                 
+            addItem(item) {
+                return this.items.push(item);
+            }
+        };
+
+        const inventory = new Inventory ();
+
+        const item1 = new Item("macbook4",30000000,"3");
+        const item2 = new Item("macbook1",55000000,"8");
+        const item3 = new Item("macbook2",15000000,"1");
+        const item4 = new Item("macbook3",21000000,"10");
+
+        inventory.addItem(item1); 
+        inventory.addItem(item2); 
+        inventory.addItem(item3); 
+        inventory.addItem(item4); 
+        
+    </script>
+</body>
+</html>
