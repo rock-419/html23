@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // gurvaljin urt
+        const input = prompt("3,4,5");
+        const sides = input.split(" ").map(Number);
+        const perimeter = sides[0]+sides[1]+sides[2];
+        console.log(perimeter);
+        // 2 tooni niilber
+        let hoyrNiilber = [3,4] ;
+        console.log(hoyrNiilber[0]+ hoyrNiilber[1]);
+        // cube
+        const a = Number(prompt())
+        console.log(a**3,a**2*6);
+        // tegsh ontsogt
+        const garniUtga = prompt("6,4");
+        console.log(6*4,(6+3)*2);
+        // function 1 
+        let xNeg = 1;
+        const yNeg = 3*xNeg-5;
+        console.log(yNeg);
+        //function 2
+        const xHoyr = -2;
+        console.log(4*xHoyr**2-3*xHoyr+5);
+        // suulin tsifir 
+        const tsifirNeg = 476;
+        console.log(tsifirNeg%10);
+        // aravtiin
+        const aravt = Number(prompt())
+        console.log((aravt%100)-(aravt%10)/10);
+
+        // hour minute seconds
+        const time = Number(prompt())
+        let seconds = time % 100 ;
+        let minutes = ((time-seconds)/100) ; 
+        let tsag =  ;
+        if (seconds>=60) {
+            seconds = seconds - 60 
+            minutes = minutes + 1;
+        }
+        if ((time - seconds ) % 60 === 0 ) {
+            minutes = 0;
+            tsag = (time - seconds) / 60;
+        }
+    
+    </script>
+</body>
+</html> 
