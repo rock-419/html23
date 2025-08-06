@@ -1,0 +1,38 @@
+button {
+    height:50px;
+    width:80px;
+    background-color: lightgray;
+    border-radius: 100px;
+    border:0.3px solid grey;
+    color:white;
+}
+
+.calculatorTwo {
+    display: grid;
+    grid-template-columns: repeat(4,80px);
+    grid-template-rows: repeat(4,50px);
+}
+
+#input {
+    font-weight: bold;
+    font-size:20px; 
+    color:whitesmoke;
+}
+
+.fifthColumn button {
+    background-color: darkorange;
+}
+
+.calculatorOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:320px;
+    height: 400px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+body {
+    background-color: grey;
+}

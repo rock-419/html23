@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel = "stylesheet" href = "calculator.css">
+</head>
+<body>
+    <div class="calculatorOne">
+        <div id="input"></div>
+
+        <div class="calculatorTwo">
+            <div class="secondColumn">
+                <button onclick="handleNumberButton(1)"> 1 </button>
+                <button onclick="handleNumberButton(4)"> 4 </button>
+                <button onclick="handleNumberButton(7)"> 7 </button>
+                <button onclick="handleNumberButton(0)"> 0 </button>
+            </div>
+            <div class="thirdColumn">
+                <button onclick="handleNumberButton(2)"> 2 </button>
+                <button onclick="handleNumberButton(5)"> 5 </button>
+                <button onclick="handleNumberButton(8)">8</button>
+                <button onclick="handleClearButton()">
+                    C
+                </button>
+            </div>
+            <div class="fourthColumn">
+                <button onclick="handleNumberButton(3)">3</button>
+                <button onclick="handleNumberButton(6)">6</button>
+                <button onclick="handleNumberButton(9)">9</button>
+                <button onclick="handleClearButton()">
+                    =
+                </button>
+            </div>
+            <div class="fifthColumn">
+                <button onclick="calc()">+</button>
+                <button onclick="calc()">-</button>
+                <button onclick="calc()">*</button>
+                <button onclick="calc()">/</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let firstValue, secondValue, operator, answer;
+        let step = 1;
+
+        const input = document.querySelectorAll("#input")
+
+        function handleNumberButton(key) {
+            input.innerHTML = input.innerHTML + key;
+        }
+
+        function handleClearButton() {
+            firstValue = 0;
+            secondValue = 0;
+            operator = undefined;
+            step = 1;
+            input.innerHTML = "0";
+        };
+
+        function handleOperatorButton(key){
+            operator = key;
+            if (step === 1){
+                firstValue = parse.Float(input.innerHTML)
+                input.innerHTML = "";
+                step = 2;
+            }
+            if (step === 2){
+                secondValue = parseFloat(input.innerHTML);
+                step = 1;
+            };
+
+        };
+        function calc() {
+            secondValue = parseFloat(input.innerHTML);
+
+            switch (operator) {
+                case "+":
+                    answer = firstValue + secondValue;
+                break;
+                case "-":
+                    answer = firstValue - secondValue;
+                break;
+                case "*":
+                    answer = firstValue * secondValue;
+                break;
+                case "/":
+                    answer = firstValue / secondValue;
+                break;
+            default:
+                    answer = parseFloat(input.innerHTML);
+        };
+            input.innerHTML = answer;
+        };
+    </script>
+</body>
+</html>
