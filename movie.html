@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="stylesheet" href="movie.css">
+
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="stickyHeader top">
+          <div class="stickyHeader leftSide">
+            <div class="stickyHeader logo-first">
+              <img src="images/NETFLIX.png" width="85px" height="40px" />
+            </div>
+            <div class="stickyHeader leftSide-of-logo">
+              <div class="firstPart">
+                <a>home</a>
+                <a>movie</a>
+                <a>game</a>
+              </div>
+              <div class="secondPart">
+                <a>Latest content</a>
+                <a>My wishlist</a>
+                <a>Browse by language</a>
+              </div>
+            </div>
+          </div>
+          <div class="stickyHeader rightSide">
+            <a class="searchBar">
+              <input id="stickyHeader search-bar" type="text" />
+              <img src="images/search.png" width="25px" height="25px" />
+            </a>
+            <a class="stickyHeader accountType"> Kids </a>
+            <a id="stickyHeader notification">
+              <img src="images/notificaiotn.png" width="25px" height="25px" />
+            </a>
+            <a id="stickyHeader accounts">
+              <img src="images/account_logo.png" width="25px" height="25px" />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="loader"></div>
+    <div class="movieTitle">
+      <img src="images/mononoke.png" />
+      <div class="play">
+        <img src="images/play.png" width="35px" height="35px" />
+        <h3>Play</h3>
+      </div>
+    </div>
+    <div class="bodyVideo">
+      <iframe
+        src="https://www.youtube.com/embed/I1dHzoRl0sQ?autoplay=1&mute=1&loop=1si=-JNcUsuvUZ0Vgz9_"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="bodyText">
+      <h2>Studio Ghibli Works</h2>
+    </div>
+    <div class="bodyMovieContainer"></div>
+  </body>
+  <script src="movie.js"></script>
+</html>
